@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(58, 60, 179);
+    color: white;
+}
+
+header{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+header img{
+    height: 75%;
+}
+main {
+    text-align: center;
+}
+footer {
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    height: 80px;
+    font-weight: bold;
+    font-family: 'Noto Sans JP';
+    color: rgb(58, 60, 179);
+    background-color: white;
+    height: 80px;
+    margin: 0;
+}
+footer img{
+    height: 80px;
+    margin: 0;
+}
+footer p{
+    top: 15%;
+    position: relative;
+    height: 60px;
+    margin: 0;
+}
+input#numeroCPF {
+    margin: 0;
+    border: none;
+    height: 100%;
+    appearance: none;
+}
+
+button#numeroCPF {
+    margin: 0;
+    color: white;
+    background-color: rgb(140, 140, 255);
+    border: none;
+    font-weight: bold;
+    height: 100%;
+}
+.entradaCPF{
+    height: 25px;
+}
+.citacao {
+    width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+/*Esconder as setas do input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
