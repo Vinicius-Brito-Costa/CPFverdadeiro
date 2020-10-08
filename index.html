@@ -2,44 +2,54 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Validador de CPF</title>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="javascript/script.js"></script>
+	<meta charset="UTF-8">
+	<title>Validador de CPF</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="javascript/script.js" async></script>
 </head>
 
 <body>
-    <header>
-        <img id="imagemCPF" src="imagens/cpf.png" alt="CPF em branco">
-        <h1>Validador de CPF</h1>
-    </header>
+	<div class="fundo">
+		<header>
+			<img id="imagemCPF" class="shadow-drop-2-bottom" src="imagens/cpf.svg" alt="CPF em branco">
+			<h1>Validador de CPF</h1>
+		</header>
 
-    <main>
-        <div class="entradaCPF">
-            <input type="number" id="numeroCPF" onkeydown="LimiteDeCaracteres(this);"
-                onkeyup="LimiteDeCaracteres(this);" placeholder="Digite apenas números">
-            <button id="numeroCPF" onclick="ValidarCPF(document.getElementById('numeroCPF').value)">Checar</button>
-        </div>
-        <div class="info">
-            <h2>O que é CPF</h2>
-            <p class="citacao">
-                "O Cadastro de Pessoa Física (CPF) é o documento que identifica o contribuinte perante a Receita
-                Federal.
-                Cada contribuinte pessoa física possui um Cartão CPF, ou simplesmente CPF, que comprova o cadastro.
-                Ele contém um número identificador que não muda. Não é obrigatório portar o cartão, mas o número do CPF
-                é exigido
-                em várias situações, principalmente em operações financeiras, como abertura de contas em bancos.
-                A Caixa atua como prestadora de serviços, efetuando inscrição, alteração cadastral e regularização de
-                situação cadastral."
-            </p>
-            <p class="autor">-<a href="https://www.caixa.gov.br/cadastros/cpf/Paginas/default.aspx" title="Caixa"
-                    target="_blank">Caixa</a></p>
-        </div>
-    </main>
-    <footer>
-        <a href="https://github.com/Vinicius-Brito-Costa" title="Github"><img src="imagens/pp.png" title="autor"></a>
-        <p>&copy;Vinicius Brito Costa<br>2020</p>
-    </footer>
+		<main>
+			<div class="entradaCPF">
+				<input type="number" id="inputCPF" onkeydown="LimiteDeCaracteres(this);"
+					onkeyup="LimiteDeCaracteres(this);" placeholder="Digite apenas números">
+				<button id="botaoCPF" onclick="ValidarCPF(document.getElementById('inputCPF').value)">Checar</button>
+			</div>
+			<div class="info">
+				<h2>O que é CPF</h2>
+				<div class="citacao">
+					<p>
+						"O Cadastro de Pessoa Física (CPF) é o documento que identifica o contribuinte perante a Receita
+						Federal.
+						Cada contribuinte pessoa física possui um Cartão CPF, ou simplesmente CPF, que comprova o
+						cadastro.
+						Ele contém um número identificador que não muda. Não é obrigatório portar o cartão, mas o número
+						do
+						CPF
+						é exigido
+						em várias situações, principalmente em operações financeiras, como abertura de contas em bancos.
+						A Caixa atua como prestadora de serviços, efetuando inscrição, alteração cadastral e
+						regularização
+						de
+						situação cadastral."
+					</p>
+					<p class="autor">-<a href="https://www.caixa.gov.br/cadastros/cpf/Paginas/default.aspx"
+							title="Caixa" target="_blank">Caixa</a></p>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer>
+		<a href="https://github.com/Vinicius-Brito-Costa" title="Github"><img src="imagens/pp.png"
+				title="autor"></a>
+		<p>&copy;Vinicius Brito Costa<br>2020</p>
+	</footer>
 </body>
 
 </html>

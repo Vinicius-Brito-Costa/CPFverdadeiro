@@ -1,3 +1,5 @@
+let log = console.log;
+
 function LimiteDeCaracteres(element) {
     let limite = 11;
     if (element.value.length > limite) {
@@ -41,10 +43,39 @@ function ValidarCPF(cpf) {
     if (restoDivSegundoNumero == listaNumerosCpf[10]) checkSegundoDigito = true;
     console.log(restoDivSegundoNumero);
 
+    AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito);
+}
 
+function AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito) {
+    let cpfImagem = document.getElementById("imagemCPF");
     if (checkSegundoDigito && checkPrimeiroDigito) {
-        alert("Valido!");
+        cpfImagem.classList.add("flip-vertical-left");
+        setTimeout(() => { cpfImagem.src = "imagens/CPF-VALIDO.svg" }, 200);
     } else {
-        alert("Não é valido.");
+        cpfImagem.classList.add("flip-vertical-right");
+        setTimeout(() => { cpfImagem.src = "imagens/CPF-INVALIDO.svg" }, 200);
+    }
+    setTimeout(function () {
+        cpfImagem.style.animation = "none";
+        cpfImagem.style.animation = '';
+    }, 10);
+    setTimeout(function () {
+        cpfImagem.className = "shadow-drop-2-bottom";
+    }, 800);
+}
+
+document.addEventListener('load', DOMLoaded());
+
+function DOMLoaded() {
+    let input = document.getElementById("inputCPF");
+    if(input)
+    {
+        input.addEventListener("keyup", function (event) {
+            if (event.code == "NumpadEnter" || event.code == "Enter") {
+                console.log("Deu certo!");
+                event.preventDefault();
+                document.getElementById("botaoCPF").click();
+            }
+        });
     }
 }
