@@ -1,0 +1,22 @@
+<svg width="776" height="486.00000000000006" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g stroke="null">
+  <title stroke="null">background</title>
+  <rect stroke="null" fill="none" id="canvas_background" height="488" width="778" y="-1" x="-1"/>
+  <g stroke="null" style="vector-effect: non-scaling-stroke;" display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <rect rx="18" id="svg_22" height="472.98676" width="764.88716" y="9.37246" x="5.55643" stroke-width="3" stroke="#f46b6b" fill="#db3434"/>
+  <path id="svg_26" d="m441.00847,138.19588l112.50202,0l34.76399,-106.87645l34.76401,106.87645l112.502,0l-91.01588,66.05252l34.76579,106.87645l-91.01592,-66.05432l-91.0159,66.05432l34.7658,-106.87645l-91.01591,-66.05252z" stroke-width="3" fill="#ffffff"/>
+  <ellipse stroke="null" ry="67.18768" rx="67.18768" id="svg_27" cy="187.4139" cx="588.2745" fill-opacity="null" stroke-width="3" fill="#ffffff"/>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="115" id="svg_28" y="171.78886" x="85.2648" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">CPF</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="35" id="svg_29" y="311.63299" x="50.10845" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">000.000.000-00</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="25" id="svg_30" y="385.31798" x="50.10841" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">NOME DA PESSOA</text>
+  <text style="cursor: text;" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="67" id="svg_31" y="464.35566" x="154.12743" stroke-width="0" stroke="#6cf76f" fill="#ffffff">CPF INVALIDO</text>
+ </g>
+</svg>
