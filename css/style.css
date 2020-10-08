@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
-
+*{
+    font-family: 'Noto Sans JP';
+}
 body {
     width: 100%;
     margin: 0;
@@ -8,14 +10,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.fundo {
-    background-color: rgb(58, 60, 179);
+#conteudo {
+    transition: 1s;
+    background: rgb(0, 36, 8);
+    background: linear-gradient(0deg, #4a73c7 5%, #4a53cf 100%);
     color: white;
-    width: 500px;
-    height: 750px;
-    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.479) ;
-    margin: 20px auto;
+    padding-bottom: 40px;
+    margin: auto;
 }
 
 header {
@@ -38,7 +39,6 @@ footer {
     font-size: 20px;
     height: 80px;
     font-weight: bold;
-    font-family: 'Noto Sans JP';
     color: rgb(58, 60, 179);
     background-color: white;
     height: 80px;
@@ -57,20 +57,27 @@ footer p {
     margin: 0;
 }
 
-input#numeroCPF {
+#inputCPF {
     margin: 0;
     border: none;
     height: 100%;
     appearance: none;
+    text-align: center;
+    font-weight: bold;
 }
 
-button#numeroCPF {
+#botaoCPF {
     margin: 0;
+    margin-left: -5px;
     color: white;
-    background-color: rgb(140, 140, 255);
+    background-color: rgb(32, 32, 114);
     border: none;
     font-weight: bold;
-    height: 100%;
+    height: 28px;
+}
+#botaoCPF:hover {
+    background-color: rgb(57, 57, 167);
+    cursor: pointer;
 }
 
 .entradaCPF {
@@ -78,16 +85,19 @@ button#numeroCPF {
 }
 
 .citacao {
+    font-size: 10px;
     width: 450px;
     margin: 0px auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.514);
+    background-color: rgba(255, 255, 255, 0.137);
     padding: 5px 10px;
 }
 
 .autor {
+    text-align: right;
     text-decoration: none;
     font-style: italic;
+    margin: 0;
 }
 
 .autor a {

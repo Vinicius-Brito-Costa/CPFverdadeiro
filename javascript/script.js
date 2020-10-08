@@ -2,7 +2,8 @@ let log = console.log;
 
 function LimiteDeCaracteres(element) {
     let limite = 11;
-    if (element.value.length > limite) {
+    let length = element.value.length;
+    if (length > limite) {
         element.value = element.value.substr(0, limite);
     }
 }
@@ -50,10 +51,18 @@ function AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito) {
     let cpfImagem = document.getElementById("imagemCPF");
     if (checkSegundoDigito && checkPrimeiroDigito) {
         cpfImagem.classList.add("flip-vertical-left");
-        setTimeout(() => { cpfImagem.src = "imagens/CPF-VALIDO.svg" }, 200);
+        setTimeout(() => { 
+            cpfImagem.src = "imagens/CPF-VALIDO.svg"; 
+            document.getElementById("conteudo").style.background = "linear-gradient(0deg,  #379b44 5%, #50b94d 100%)"; 
+        }, 200);
+        
     } else {
         cpfImagem.classList.add("flip-vertical-right");
-        setTimeout(() => { cpfImagem.src = "imagens/CPF-INVALIDO.svg" }, 200);
+        setTimeout(() => { 
+            cpfImagem.src = "imagens/CPF-INVALIDO.svg";
+            document.getElementById("conteudo").style.background = "linear-gradient(0deg, #913232 5%, #b94d4d 100%)";
+        }, 200);
+        
     }
     setTimeout(function () {
         cpfImagem.style.animation = "none";
