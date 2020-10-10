@@ -1,5 +1,3 @@
-let log = console.log;
-
 function LimiteDeCaracteres(element) {
     let limite = 11;
     let length = element.value.length;
@@ -10,41 +8,30 @@ function LimiteDeCaracteres(element) {
 
 function ValidarCPF(cpf) {
     let listaNumerosCpf = cpf.toString().split("");
-    console.log(cpf);
-    console.log(listaNumerosCpf);
-    let checkPrimeiroDigito = false;
-    let checkSegundoDigito = false;
-
-    /*Primeiro Numero*/
-    let repeticaoPrimeiroDigito = 0;
-    let primeiroValorFinal = 0;
-    for (repeticao = 10; repeticao >= 2; repeticao--) {
-        let valor = listaNumerosCpf[repeticaoPrimeiroDigito] * repeticao;
-        primeiroValorFinal += valor;
-        repeticaoPrimeiroDigito++;
-        console.log(valor);
-    }
-    let restoDivPrimeiroNumero = (primeiroValorFinal * 10) % 11;
-    if (restoDivPrimeiroNumero == 0.10) {
-        restoDivPrimeiroNumero = 0;
-    }
-    if (restoDivPrimeiroNumero == listaNumerosCpf[9]) checkPrimeiroDigito = true;
-    console.log(restoDivPrimeiroNumero);
-
-    /*Segundo Numero*/
-    let repeticaoSegundoDigito = 0;
-    let segundoValorFinal = 0;
-    for (repeticao = 11; repeticao >= 2; repeticao--) {
-        let valor = listaNumerosCpf[repeticaoSegundoDigito] * repeticao;
-        segundoValorFinal += valor;
-        repeticaoSegundoDigito++;
-        console.log(valor);
-    }
-    let restoDivSegundoNumero = (segundoValorFinal * 10) % 11;
-    if (restoDivSegundoNumero == listaNumerosCpf[10]) checkSegundoDigito = true;
-    console.log(restoDivSegundoNumero);
+    let checkPrimeiroDigito = ValidaDigito(10, listaNumerosCpf);
+    let checkSegundoDigito = ValidaDigito(11, listaNumerosCpf);
 
     AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito);
+}
+
+function ValidaDigito(repeticoes, listaNumerosCpf)
+{
+    let primeiro = false;
+    let repeticao = 0;
+    let valorFinal = 0;
+    if(repeticoes == 10) primeiro = true;
+    for (repete = repeticoes; repete >= 2; repete--) {
+        let valor = listaNumerosCpf[repeticao] * repete;
+        valorFinal += valor;
+        repeticao++;
+    }
+    let restoDiv = (valorFinal * 10) % 11;
+    if (primeiro && restoDiv == 10) {
+        restoDiv = 0;
+    }
+    let checkDigito = false;
+    if (restoDiv == listaNumerosCpf[repeticoes -1]) checkDigito = true;
+    return checkDigito;
 }
 
 function AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito) {
@@ -73,6 +60,7 @@ function AnimacaoValidacao(checkPrimeiroDigito, checkSegundoDigito) {
     }, 800);
 }
 
+/* Espera o documento ser carregado para acionar a função */
 document.addEventListener('load', DOMLoaded());
 
 function DOMLoaded() {
@@ -81,7 +69,6 @@ function DOMLoaded() {
     {
         input.addEventListener("keyup", function (event) {
             if (event.code == "NumpadEnter" || event.code == "Enter") {
-                console.log("Deu certo!");
                 event.preventDefault();
                 document.getElementById("botaoCPF").click();
             }
